@@ -1,0 +1,15 @@
+# Все роботы
+User-agent: *
+# Разрешаем индексировать весь сайт
+Allow: /
+
+# Запретить доступ к административным страницам
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+
+# Запретить индексацию папки с приватными файлами
+Disallow: /private/
+
+# Sitemap для поисковых систем
+Sitemap: https://example.com/sitemap.xml
