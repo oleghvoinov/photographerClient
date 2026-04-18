@@ -1,0 +1,265 @@
+.header-nav,
+.header-nav-first {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  margin-bottom: 10px;
+  z-index: 102;
+  padding: 10px 20px 0 20px;
+
+  background-color: none;
+
+  @media (max-width: 1200px) {
+    padding: 0 38px;
+  }
+  @media (max-width: 800px) {
+    padding: 0;
+  }
+}
+
+.header-nav-first {
+  left: -18px;
+}
+
+.haeder-wrapper {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  @media (max-width: 1200px) {
+    width: auto;
+  }
+  @media (max-width: 800px) {
+    width: auto;
+    justify-content: space-between;
+  }
+}
+
+.header-nav__links {
+  display: flex;
+  list-style: none;
+  height: 100%;
+
+  padding-top: 3px;
+  margin-right: 35px;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.header-nav__link {
+  display: block;
+  position: relative;
+  font-family: "Inter";
+  font-weight: normal;
+  color: #000;
+  margin: 0 10px;
+  padding: 0 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+
+  //для gsap
+  transform: translateY(-40px);
+  opacity: 0;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 0.7px;
+    width: 0;
+    background: #323232;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+      right: auto;
+      transition: width 0.3s ease 0s, right 0.3s ease 0s;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 10px;
+  }
+}
+
+/////logo
+
+.logo {
+  position: relative;
+  display: inline-flex;
+  justify-content: start;
+  align-items: end;
+  gap: 3px;
+
+  margin-bottom: 10px;
+
+  @media (max-width: 800px) {
+    margin-top: 14px;
+    padding-left: 12px;
+  }
+  @media (max-width: 520px) {
+    display: block;
+  }
+}
+
+.logo__welcome {
+  font-size: 15px;
+  text-transform: uppercase;
+
+  @media (max-width: 520px) {
+    font-size: 18px;
+  }
+}
+
+.logo__me {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  padding: 0 5px;
+
+  @media (max-width: 520px) {
+    font-size: 20px;
+  }
+}
+
+.logo__profession {
+  font-size: 16px;
+  color: #000;
+  text-transform: uppercase;
+
+  @media (max-width: 520px) {
+    font-size: 16px;
+  }
+}
+
+///Button nav
+.nav-button {
+  display: none;
+
+  transition: opacity 0.6s ease-in;
+
+  align-items: center;
+  column-gap: 15px;
+  color: #ffffff;
+
+  a {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #ffffff;
+  }
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
+
+.modalOpen {
+}
+.line {
+  fill: none;
+  stroke: #323232;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 40 100;
+  stroke-dashoffset: 0;
+  stroke-width: 3;
+  stroke: #323232;
+}
+
+.line3 {
+  stroke-dasharray: 40 100;
+  stroke-dashoffset: 0;
+  stroke-width: 3;
+  stroke: #323232;
+}
+
+.opened {
+  display: none;
+  position: relative;
+  opacity: 1;
+  pointer-events: all;
+  //ransition: all 0.6s ease-in;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
+
+.opened .line1 {
+  stroke-dasharray: 39 82;
+  stroke-dashoffset: -80;
+  stroke-width: 3;
+}
+
+.opened .line3 {
+  stroke-dasharray: 38 85;
+  stroke-dashoffset: -80;
+  stroke-width: 3;
+}
+
+.logo-admin {
+  font-size: 16px;
+  color: #000;
+
+  position: relative;
+
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
+.anticon-logout {
+  position: absolute;
+  bottom: 50%;
+}
+////////////
+.header-modal.ant-modal-content {
+  height: 100vh !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: linear-gradient(
+    135deg,
+    rgb(238, 238, 238) 50%,
+    rgb(193, 193, 193) 100%
+  ) !important;
+}
+
+.mobile-menu {
+  display: block;
+  padding: 70px 30px;
+}
+
+.mobile-menu__link {
+  display: block;
+  margin: 10px;
+  padding: 10px 0;
+
+  font-size: 16px;
+  font-weight: 500;
+}

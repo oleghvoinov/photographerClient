@@ -1,0 +1,105 @@
+.frontWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Три равных колонки
+  padding: 10px;
+  height: 100vh; // Занимает всю высоту экрана
+  gap: 10px; // Убираем промежутки между колонками
+}
+
+.front-item {
+  height: 100%; // Растягиваем на всю высоту колонки
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  overflow: hidden;
+}
+
+.front-item__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.avatar-uploader {
+  flex-grow: 1; // Растягиваем Upload на всю высоту родительского контейнера
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5; // Фон для отладки
+  border: none;
+}
+
+.front-item .ant-upload.ant-upload-select-picture-card {
+  width: 100%; // Убираем фиксированные размеры Ant Design
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.front-item .ant-upload-list-picture-card-container {
+  width: 100%; // Растягиваем список загруженных изображений
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; // Обрезаем всё, что выходит за границы
+}
+
+.front-item .ant-upload-list-item {
+  width: 100%; // Убираем фиксированную ширину
+  height: 100%;
+}
+
+.front-item .upload-placeholder {
+  width: 100%; // Растягиваем плейсхолдер
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-color: #e6f7ff;
+  background-color: #fafafa;
+  font-size: 24px;
+  color: #888;
+}
+
+.front-item .upload-placeholder:hover {
+  background-color: #e6f7ff;
+  border-color: #e6f7ff;
+}
+
+.front-item .ant-upload-list-picture-card {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.front-item .ant-upload-list-item-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.front-item .ant-upload-list-item-image {
+  object-fit: cover !important;
+}
+
+.front-item .anticon-eye {
+  width: 48px !important;
+  font-size: 30px !important;
+  margin-right: 20px !important;
+}
+
+.front-item .anticon-delete {
+  width: 48px !important;
+  font-size: 30px !important;
+}
+
+.front-item .ant-upload-select {
+  width: 100% !important;
+  height: 100% !important;
+}

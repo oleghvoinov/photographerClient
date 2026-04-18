@@ -1,0 +1,148 @@
+.main-nav__item {
+  position: relative;
+
+  cursor: pointer;
+
+  height: 100%;
+  width: 33%;
+
+  overflow: hidden;
+
+  opacity: 0;
+  -webkit-transform: rotateY(60deg);
+  -ms-transform: rotateY(60deg);
+  transform: rotateY(60deg) scale(0.5);
+
+  background-position: center;
+  background-size: cover;
+
+  transition: all 1s ease;
+
+  box-shadow: 0px 7px 7px 1px rgba(0, 0, 0, 0.5);
+
+  will-change: transform, opacity;
+
+  &:hover {
+    width: 140%;
+    transition: all 1s ease;
+  }
+  &:hover .main-nav__link {
+    filter: grayscale(0) brightness(1);
+    transition: all 1s ease;
+  }
+  &:hover .main-nav__title {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+
+    box-shadow: 0px 7px 7px 1px rgba(0, 0, 0, 0.5);
+
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    &:hover {
+      width: 100%;
+    }
+  }
+
+  &:first-child {
+    @media (max-width: 460px) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+}
+
+.main-nav__link {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  background-position: center;
+  background-size: cover;
+
+  filter: grayscale(1) brightness(0.5);
+  transition: all 1s ease;
+
+  img {
+    object-fit: cover;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    filter: none;
+    z-index: 98;
+
+    img {
+      opacity: 0.9;
+      filter: brightness(40%);
+    }
+  }
+}
+
+.main-nav__title-wrapper {
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+
+  transform: translate(0, -50%);
+
+  width: 100%;
+
+  @media (max-width: 800px) {
+    bottom: 10%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.main-nav__title {
+  display: inline-block;
+  position: relative;
+
+  text-align: center;
+
+  // font-family: "Poppins";
+  font-weight: normal;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background-color: transparent;
+
+  span {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    transition: all 0.3s ease-out;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 13px;
+  }
+}

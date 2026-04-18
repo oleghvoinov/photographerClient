@@ -1,0 +1,19 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.modal__title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.modal__buttom {
+  margin-bottom: 8px;
+}

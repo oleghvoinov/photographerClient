@@ -1,0 +1,43 @@
+.sidebar__link {
+  position: relative;
+
+  text-align: center;
+
+  display: block;
+
+  width: 100%;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 0.7px;
+    width: 0;
+    background: #000;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
+  }
+
+  @media (max-width: 1020px) {
+    padding: 5px 0;
+    font-size: 17px;
+    font-weight: 400;
+
+    &::after {
+    }
+  }
+}
+
+.change {
+  &::after {
+    width: 100%;
+    left: 0;
+
+    right: auto;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
+  }
+}

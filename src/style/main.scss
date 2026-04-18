@@ -1,0 +1,57 @@
+@use "./reset";
+@use "./vars";
+@use "./utils";
+@use "./sticky-footer";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "SFMono";
+  src: url("../assets/fonts/SFMono/SFMono-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* чтобы текст показывался системным шрифтом до загрузки */
+}
+@font-face {
+  font-family: "SFMono";
+  src: url("../assets/fonts/SFMono/SFMono-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; /* чтобы текст показывался системным шрифтом до загрузки */
+}
+
+@font-face {
+  font-family: "SFMono";
+  src: url("../assets/fonts/SFMono/SFMono-Light.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; /* чтобы текст показывался системным шрифтом до загрузки */
+}
+
+@font-face {
+  font-family: "SFMono";
+  src: url("../assets/fonts/SFMono/SFMono-Medium.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; /* чтобы текст показывался системным шрифтом до загрузки */
+}
+
+body {
+  color: var(--text-color);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  background: linear-gradient(
+    135deg,
+    rgb(238, 238, 238) 50%,
+    rgb(193, 193, 193) 100%
+  );
+  background-attachment: fixed;
+
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+}
