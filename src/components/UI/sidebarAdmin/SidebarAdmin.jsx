@@ -8,12 +8,8 @@ const SidebarAdmin = () => {
     {
       key: "link",
       icon: <LaptopOutlined />,
-      disabled: true,
-      label: (
-        <Link to="/" rel="noopener noreferrer">
-          NOVIKOVA
-        </Link>
-      ),
+      // disabled: true,
+      label: <Link to="/">NOVIKOVA</Link>,
     },
     {
       key: "1",
@@ -34,6 +30,11 @@ const SidebarAdmin = () => {
       key: "4",
 
       label: <Link to="/admin/about">Контакты</Link>,
+    },
+    {
+      key: "5",
+
+      label: <Link to="/admin/yandexTool">Настройки</Link>,
     },
   ];
 

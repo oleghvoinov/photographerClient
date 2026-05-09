@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import MyFooter from "../../components/MyFooter";
+
 import "./myCase.scss";
 
 import { gsap } from "gsap";
@@ -7,28 +7,15 @@ import { gsap } from "gsap";
 import { useParams } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { getOneDir } from "../../API/dir";
-import { downloadFrontFile } from "../../API/file";
 
 import { Image, Tabs, ConfigProvider, Modal, Button, Dropdown } from "antd";
 
 import Masonry from "react-masonry-css";
 import { EnterOutlined, DownloadOutlined } from "@ant-design/icons";
-import {
-  downloadfileStream,
-  downloadHDfile,
-  downloadFileProxy,
-} from "../../API/yandexDisk";
+import { downloadFileProxy } from "../../API/yandexDisk";
 import ModalForDown from "../../components/UI/modalForDown/ModalForDown";
 import ModalForRepost from "../../components/UI/modalForRepost/ModalForRepost";
 import { useScrollbarAwareWidth } from "../../hook/useScrollbarAwareWidth";
-
-import {
-  CommentOutlined,
-  CheckOutlined,
-  CloseOutlined,
-} from "@ant-design/icons";
-import { FaTelegramPlane, FaInstagram } from "react-icons/fa";
-import { FloatButton, Switch } from "antd";
 
 import { Helmet } from "react-helmet-async";
 
@@ -279,7 +266,7 @@ const MyCase = () => {
     <div className="footer-wrapper">
       <Helmet>
         <title>Портфолио фотографа в Нижнем Новгороде | Вика Новикова</title>
-        <link rel="canonical" href={window.location.href} />
+
         <meta
           name="description"
           content="Портфолио фотографа: лучшие свадебные, портретные и репортажные работы. Живые эмоции, идеальный свет и уникальный стиль съёмки."
@@ -292,9 +279,8 @@ const MyCase = () => {
           property="og:description"
           content="Лучшие свадебные, портретные и репортажные работы. Живые эмоции, идеальный свет и уникальный стиль съёмки."
         />
-        <meta property="og:image" content={oneDir[id]?.prewieImg[0].path} />
+
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
       </Helmet>
       {tabs.length != 1 ? (
         <div className="case-wrapper">

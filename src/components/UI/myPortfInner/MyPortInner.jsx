@@ -41,9 +41,11 @@ const MyPortInner = () => {
     dispatch(getDir());
   }, [dispatch]);
 
-  const dirs = useSelector((state) => state.dirs.dirs).filter(
-    (item) => item.inPortfolio
-  );
+  const dirsState = useSelector((state) => state.dirs.dirs);
+
+  const dirs = Array.isArray(dirsState)
+    ? dirsState.filter((item) => item.inPortfolio)
+    : [];
 
   const handleSlideChange = (index) => {
     if (swiperRef.current) {

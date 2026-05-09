@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "@ant-design/v5-patch-for-react-19";
 
 import App from "./App";
 import { store } from "./redusers/index";
@@ -42,5 +41,5 @@ root.render(
         <App />
       </HelmetProvider>
     </Provider>
-  </ConfigProvider>
+  </ConfigProvider>,
 );

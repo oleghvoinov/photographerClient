@@ -1,14 +1,13 @@
 import "./myAbout.scss";
 import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
-import mechImgJpg from "../../files/8bc38993b1acaceb424cc2542af7a560.jpg";
 
 const MyAbout = () => {
   return (
     <div className="prices-wrapper">
       <Helmet>
         <title>Фотограф в Нижнем Новгороде. Контакты| Вика Новикова</title>
-        <link rel="canonical" href={window.location.href} />
+        <link rel="canonical" href="https://vinovikova.art/about" />
         <meta
           name="description"
           content="Свяжитесь с фотографом для бронирования съёмки или консультации."
@@ -21,9 +20,14 @@ const MyAbout = () => {
           property="og:description"
           content="Свяжитесь для бронирования съёмки или консультации. Телефон, email, мессенджеры и форма обратной связи."
         />
-        <meta property="og:image" content={mechImgJpg} />
+        <meta
+          property="og:image"
+          content="https://vinovikova.art/files/8bc38993b1acaceb424cc2542af7a560.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content="https://vinovikova.art/about" />
       </Helmet>
       <div className="contacts-container">
         <p>Привет!</p>

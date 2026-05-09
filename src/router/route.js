@@ -9,6 +9,7 @@ import AdminAbout from "../pages/adminAbout/AdminAbout";
 import AdminFront from "../pages/adminFront/AdminFront";
 import AdminPortfolio from "../pages/adminPortfolio/AdminPortfolio";
 import AdminPrices from "../pages/adminPrices/AdminPrices";
+import AdminTools from "../pages/adminTools/AdminTools";
 
 export const publicRoutes = [
   { path: "/", component: MyFront },
@@ -25,4 +26,5 @@ export const adminRoutes = [
   { path: "/admin/portfolio", component: AdminPortfolio },
   { path: "/admin/prices", component: AdminPrices },
   { path: "/admin/about", component: AdminAbout },
+  { path: "/admin/yandexTool", component: AdminTools },
 ];

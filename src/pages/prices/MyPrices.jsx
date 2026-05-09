@@ -77,7 +77,7 @@ const MyPrices = () => {
           Цены на фотосъёмку в Нижнем Новгороде — свадьбы, Love Story,
           индивидуальные | Вика Новикова
         </title>
-        <link rel="canonical" href={window.location.href} />
+        <link rel="canonical" href="https://vinovikova.art/prices" />
         <meta
           name="description"
           content="Прозрачные цены на фотосъёмку: свадьбы, портреты, love story, мероприятия. Гибкие пакеты и индивидуальный подход."
@@ -87,9 +87,14 @@ const MyPrices = () => {
           property="og:description"
           content="Цены на свадьбы, портреты, love story и мероприятия. Гибкие пакеты и индивидуальный подход."
         />
-        <meta property="og:image" content={mechImgJpg} />
+        <meta
+          property="og:image"
+          content="https://vinovikova.art/files/8bc38993b1acaceb424cc2542af7a560.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content="https://vinovikova.art/prices" />
       </Helmet>
       <div className="prices-wrapper">
         <h1 className="prices__title">Cтоимость и виды работ.</h1>

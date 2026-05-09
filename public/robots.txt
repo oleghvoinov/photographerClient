@@ -12,4 +12,4 @@ Disallow: /register/
 Disallow: /private/
 
 # Sitemap для поисковых систем
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://vinovikova.art/sitemap.xml
